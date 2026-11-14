@@ -1,0 +1,19 @@
+{
+  "//": "Source: package.json (devDependencies) + the CDN assets of the Blade views. Laravel's own build tools (vite ^5.0.0, laravel-vite-plugin ^1.0.0) have no LibMan equivalent — see TODO(Laravel) in wwwroot/js/app.js. three.js is vendored in public/vendor/three (copied to wwwroot/vendor/three), not installed. Google Fonts (Fraunces, Work Sans) stay a <link> in the layouts.",
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "//": "package.json devDependencies: \"axios\": \"^1.6.4\" (imported by resources/js/bootstrap.js)",
+      "library": "axios@1.6.4",
+      "destination": "wwwroot/lib/axios/",
+      "files": [ "axios.min.js" ]
+    },
+    {
+      "//": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js\"> — still loaded from the CDN by the views, listed here so it can be served locally",
+      "library": "html2canvas@1.4.1",
+      "destination": "wwwroot/lib/html2canvas/",
+      "files": [ "html2canvas.min.js" ]
+    }
+  ]
+}

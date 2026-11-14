@@ -1,0 +1,41 @@
+
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Designly</RootNamespace>
+    <AssemblyName>Designly</AssemblyName>
+    
+    <UserSecretsId>designly-0b4d3f2a-laravel-mirror</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.11" />
+    
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.6" />
+    
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.11" />
+    
+    
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    
+    <Content Update="Views\DesignReference\**" CopyToPublishDirectory="Never" />
+    
+    <None Include="designly.sql" CopyToOutputDirectory="Never" />
+  </ItemGroup>
+
+</Project>
